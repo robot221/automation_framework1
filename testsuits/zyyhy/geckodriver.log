@@ -1,0 +1,88 @@
+1562572675720	geckodriver	INFO	Listening on 127.0.0.1:32734
+1562572678700	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.2BotGqlWFDCS
+1562572678707	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562572678961	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32743
+1562572680312	Marionette	INFO	Listening on port 32743
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+1562572858700	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+1562573049537	geckodriver	INFO	Listening on 127.0.0.1:31570
+1562573052488	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.go21bnM8Fzrx
+1562573052495	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562573052659	geckodriver::marionette	INFO	Connecting to Marionette on localhost:31578
+1562573053911	Marionette	INFO	Listening on port 31578
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+1562573234492	addons.productaddons	WARN	Failed downloading via XHR, status: 0, reason: error
+INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.heLnrhomkJ7c
+1562573194831	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562573194988	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32680
+1562573196275	Marionette	INFO	Listening on port 32680
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1562573286650	geckodriver	INFO	Listening on 127.0.0.1:32769
+1562573289628	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.4AiJlQWaFbAR
+1562573289632	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562573289809	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32779
+1562573291212	Marionette	INFO	Listening on port 32779
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1562573553879	geckodriver	INFO	Listening on 127.0.0.1:32984
+1562573556847	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.kxsIrYJyHUSg
+1562573556849	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562573556977	geckodriver::marionette	INFO	Connecting to Marionette on localhost:32992
+1562573558235	Marionette	INFO	Listening on port 32992
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1562573700337	geckodriver	INFO	Listening on 127.0.0.1:33096
+1562573703286	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.j7YXGGsPcyB5
+1562573703289	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562573703408	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33104
+1562573704717	Marionette	INFO	Listening on port 33104
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1562574246540	geckodriver	INFO	Listening on 127.0.0.1:33295
+1562574249488	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.vi391Zl09xmz
+1562574249491	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562574249651	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33304
+1562574251692	Marionette	INFO	Listening on port 33304
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+1562574419441	geckodriver	INFO	Listening on 127.0.0.1:33390
+1562574422417	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.X1vwIWiQ0JR8
+1562574422423	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562574422569	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33398
+1562574423730	Marionette	INFO	Listening on port 33398
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 5: Error: Permission denied to access property "getComputedStyle"
+1562574607001	geckodriver	INFO	Listening on 127.0.0.1:33628
+1562574609967	mozprofile::profile	INFO	Using profile path C:\Users\Hi\AppData\Local\Temp\rust_mozprofile.oMpmONO4hLpt
+1562574609973	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe
+1562574610047	geckodriver::marionette	INFO	Connecting to Marionette on localhost:33637
+1562574611332	Marionette	INFO	Listening on port 33637
+JavaScript warning: resource://addoninstaller/log4moz.js, line 494: mutating the [[Prototype]] of an object will cause your code to run very slowly; instead create the object with the correct initial [[Prototype]] value using Object.create
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript error: http://192.168.250.194:9697/ccloud-icop/static/js/frame.js, line 95: ReferenceError: HashMap is not defined
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead
+JavaScript warning: http://192.168.250.194:9697/ccloud-icop/static/component/jquery/jquery-1.9.1.min.js, line 1: Using //@ to indicate sourceMappingURL pragmas is deprecated. Use //# instead

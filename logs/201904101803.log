@@ -1,0 +1,6 @@
+2019-04-10 18:03:44,245 - BrowserEngine - INFO : 你选择的浏览器是 Chrome
+2019-04-10 18:03:44,249 - BrowserEngine - INFO : 待测试系统的URL是：https://www.baidu.com
+2019-04-10 18:03:59,170 - BrowserEngine - INFO : 开始启动谷歌浏览器
+2019-04-10 18:03:59,882 - BrowserEngine - INFO : 打开的URL是：https://www.baidu.com
+2019-04-10 18:04:01,085 - BrowserEngine - INFO : 最大化当前窗口
+2019-04-10 18:04:01,087 - BrowserEngine - INFO : 设置隐式等待时间为10秒
