@@ -324,6 +324,9 @@ class BasePage(object):
         else:
             return False
 
+    def exe_js(self,js):
+        '''执行js'''
+        self.driver.execute_script(js)
     @staticmethod
     def sleep(seconds):
         time.sleep(seconds)
