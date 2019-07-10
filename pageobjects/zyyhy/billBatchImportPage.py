@@ -33,6 +33,7 @@ class BillBIPage(BasePage):
     #选择状态
     def select_status(self,status='请选择'):
         self.click(self.select_status_btn)
+        #self.sleep(3)
         if status == '成功':
             self.click('xpath=>//ul[@id="statusName-ul-li-ul"]/li/a[@itemtext="成功"]')
         elif status == '失败':
@@ -45,8 +46,9 @@ class BillBIPage(BasePage):
     #记录总数
     detail_record_num = 'css=>div#pg-detail>div.totalCountLabel'
     #确定按钮
-    confirm_btn = 'xpath=>//div[@show-detail-modal-content]/div[@class="modal-footer modal-footer"]/a'
-
+    confirm_btn = 'xpath=>//div[@id="show-detail-modal-content"]/div[@class="modal-footer modal-footer"]/a'
+    #关闭按钮
+    close_btn = 'xpath=>//div[@id="show-detail-modal-content"]/div[@class="modal-header modal-header"]/button'
     #导入后操作提示确定按钮
     operate_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-footer modal-footer"]/a'
     #批量导入
@@ -74,12 +76,12 @@ class BillBIPage(BasePage):
     def view_detail_and_get_failNum(self):
         eles = self.find_elements(self.dealInfos)
         eles[0].click()
-        self.click(self.select_status_btn)
+        #self.click(self.select_status_btn)
         self.select_status(status='失败')
         self.click(self.detail_query_btn)
         totalCountEle = self.find_element(self.detail_record_num)
         failNum = totalCountEle.text.split('共')[1].split('条')[0]
-        self.click(self.confirm_btn)
+        self.click(self.close_btn)
         return failNum
 
 
