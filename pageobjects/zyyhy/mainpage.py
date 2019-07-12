@@ -76,7 +76,7 @@ class MainPage(BasePage):
         self.move_to_ele(self.menu_xsjf)
         self.click(self.zdgl)
 
-    def click_zdgl(self):
+    def click_jfxxbb(self):
         '''跳转到缴费信息报表'''
         self.click(self.menu_life)
         self.move_to_ele(self.menu_xsjf)
