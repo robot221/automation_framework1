@@ -49,3 +49,56 @@ class MainPage(BasePage):
         self.move_to_ele(self.menu_neighbor)
         self.click(self.menu_vote_m)
 
+    menu_xsjf = 'link_text=>线上缴费'
+    #账单批量导入
+    zdpldr = 'id=>accordion-item-237'
+    #账单管理
+    zdgl = 'id=>accordion-item-236'
+    #缴费信息报表
+    jfxxbb = 'id=>accordion-item-296'
+    #物业收费标准
+    wysfbz = 'id=>accordion-item-291'
+    #停车费代缴
+    tcfdj = 'id=>accordion-item-274'
+    #缴费二维码
+    jfewm = 'id=>accordion-item-297'
+
+
+    def click_zdpldr(self):
+        '''跳转到账单批量导入'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_xsjf)
+        self.click(self.zdpldr)
+
+    def click_zdgl(self):
+        '''跳转到账单管理'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_xsjf)
+        self.click(self.zdgl)
+
+    def click_jfxxbb(self):
+        '''跳转到缴费信息报表'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_xsjf)
+        self.click(self.jfxxbb)
+
+
+    def click_wysfbz(self):
+        '''跳转到物业收费标准'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_xsjf)
+        self.click(self.wysfbz)
+
+
+    def click_tcfdj(self):
+        '''跳转到停车费代缴'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_xsjf)
+        self.click(self.tcfdj)
+
+
+    def click_jfewm(self):
+        '''跳转到缴费二维码'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_xsjf)
+        self.click(self.jfewm)
