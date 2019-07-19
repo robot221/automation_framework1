@@ -48,13 +48,48 @@ class BillFeeStandard(BasePage):
         '''从frame中切回主文档'''
         self.driver.switch_to.default_content()
 
-    textarea = 'xpath=>//body[@class="view"]/p[1]'
+    textarea = 'xpath=>//body[@class="view"]'
     save_btn = 'id=>device-edit-button-confirm'
 
-    def add_feeStandard(self,feeTypeName='物业费',content=''):
+    def add_feeStandard(self,systemName='中原壹号院',feeTypeName='物业费',content=''):
+        '''新增'''
+        self.select_systemName(systemName)
+        self.click(self.add_btn)
         self.select_feeTypeName(feeTypeName)
         self.to_frame()
         self.type(self.textarea,content)
         self.to_default_content()
         self.click(self.save_btn)
+
+    def close_alert(self):
+        close_btn = 'xpath=>//div[@id="error-div-modal-content"]/div/button[@class="close" and @type="button"]'
+        self.click(close_btn)
+
+    def modify_feeStandard(self,systemName='中原壹号院',content=''):
+        '''修改'''
+        totalCount = self.query_by_systemName(systemName)
+        if totalCount > 0:
+            eles = self.find_elements(self.modify_btns)
+            eles[-1].click()
+            self.to_frame()
+            self.type(self.textarea, content)
+            self.to_default_content()
+            self.sleep(1)
+            self.click(self.save_btn)
+        else:
+            print('无数据，不能进行修改操作')
+
+    del_confirm_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-footer modal-footer"]/a[@class="btn btn-modal"]'
+    def del_feeStandard(self,systemName='中原壹号院'):
+        '''删除'''
+        totalCount = self.query_by_systemName(systemName)
+        if totalCount > 0:
+            eles = self.find_elements(self.del_btns)
+            eles[1].click()
+            self.click(self.del_confirm_btn)
+        else:
+            print('无数据，不能进行删除操作')
+
+
+
 
