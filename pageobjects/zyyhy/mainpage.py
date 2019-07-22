@@ -102,3 +102,19 @@ class MainPage(BasePage):
         self.click(self.menu_life)
         self.move_to_ele(self.menu_xsjf)
         self.click(self.jfewm)
+
+    menu_yjlx = 'link=>一键联系'
+    lxrgl = 'id=>accordion-item-249' #联系人管理
+    bdjl = 'id=>accordion-item-294' #拨打记录
+
+    def click_lxrgl(self):
+        '''跳转到联系人管理'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_yjlx)
+        self.click(self.lxrgl)
+
+    def click_bdjl(self):
+        '''跳转到拨打记录'''
+        self.click(self.menu_life)
+        self.move_to_ele(self.menu_yjlx)
+        self.click(self.bdjl)
