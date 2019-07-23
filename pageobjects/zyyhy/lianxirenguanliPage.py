@@ -65,7 +65,7 @@ class LxrglPage(BasePage):
         '''选择项目'''
         if projectName != '请选择':
             self.click(self.projectName_btn)
-            projectName_option = f'xpath=>//ul[@id="conEditSystemName-ul-li-ul"]/li/a[@itemtext="{projectName}"]'
+            projectName_option = f'xpath=>//ul[@id="projectName-ul-li-ul"]/li/a[@itemtext="{projectName}"]'
             if self.isElementExist(projectName_option):
                 self.click(projectName_option)
 
@@ -117,4 +117,35 @@ class LxrglPage(BasePage):
             if qphoneNumber != None:
                 self.type(self.qphoneNumber, qphoneNumber)
             self.click(self.save_btn)
+
+    del_confirm_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-footer modal-footer"]/a[1]' #确认删除按钮
+    def delete(self):
+        if self.get_totalCount() > 0:
+            del_eles = self.find_elements(self.del_btns)
+            index = randint(0,len(del_eles)-1)
+            del_eles[index].click()
+            self.click(self.del_confirm_btn)
+    '''显示状态变更'''
+
+    switchBtns = 'name=>switchBtn'
+    operate_close_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-header modal-header"]/button'
+    def set_switch_view(self,switch_on=False):
+        '''
+        显示状态变更
+        :param switch_on: False 关闭显示状态，True开启显示状态
+        :return:
+        '''
+        if self.get_totalCount() > 0:
+            switchs = self.find_elements(self.switchBtns)
+            for switch in switchs:
+                if switch_on:
+                    if self.get_attr_value(switch,"isopen") == "false":
+                        switch.click()
+                        self.click(self.operate_close_btn)
+                else:
+                    if self.get_attr_value(switch,"isopen") == "true":
+                        switch.click()
+                        self.click(self.operate_close_btn)
+
+
 
