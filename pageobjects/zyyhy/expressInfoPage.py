@@ -182,7 +182,7 @@ class ExpressInfoPage(BasePage):
     删除
     '''
     del_btns = 'xpath=>//a[@class="class-delete" and @title="删除"]'  # 删除按钮
-    confirm_del_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-footer modal-footer"]/a[1]'
+    confirm_del_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-footer modal-footer"]/a[1]' #确定删除按钮
 
     def delete_express(self):
         '''

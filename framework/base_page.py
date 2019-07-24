@@ -217,7 +217,11 @@ class BasePage(object):
             self.get_windows_img()
 
     def clear(self,selector):
-        el = self.find_element(selector)
+        #el = self.find_element(selector)
+        if isinstance(selector,str):
+            el = self.find_element(selector)
+        else:
+            el = selector
         try:
             el.clear()
             logger.info("Clear text in input box before typing." )
@@ -327,6 +331,11 @@ class BasePage(object):
     def exe_js(self,js):
         '''执行js'''
         self.driver.execute_script(js)
+
+    def get_attr_value(self,element,value):
+        '''获取元素的属性值'''
+        return element.getAttribute(value)
+
     @staticmethod
     def sleep(seconds):
         time.sleep(seconds)
