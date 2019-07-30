@@ -30,7 +30,7 @@ class LxrglPage(BasePage):
         eles = self.find_elements(self.address_list)
         if len(eles) > check_num:
             for index in range(check_num):
-                if eles[index].getAttribute("class") != 'checked':
+                if eles[index].get_attribute("class") != 'checked':
                     eles[index].click()
         else:
             for ele in eles:
@@ -74,7 +74,7 @@ class LxrglPage(BasePage):
         '''选择状态'''
         if statusName != '显示状态':
             self.click(self.statusName_btn)
-            statusName_option = f'xpath=>//ul[@id="conEditSystemName-ul-li-ul"]/li/a[@itemtext="{statusName}"]'
+            statusName_option = f'xpath=>//ul[@id="statusName-ul-li-ul"]/li/a[@itemtext="{statusName}"]'
             if self.isElementExist(statusName_option):
                 self.click(statusName_option)
 
@@ -137,15 +137,21 @@ class LxrglPage(BasePage):
         '''
         if self.get_totalCount() > 0:
             switchs = self.find_elements(self.switchBtns)
-            for switch in switchs:
-                if switch_on:
+
+            if switch_on:
+
+                for switch in switchs:
                     if self.get_attr_value(switch,"isopen") == "false":
                         switch.click()
                         self.click(self.operate_close_btn)
-                else:
+                        self.sleep(1)
+                        switchs = self.find_elements(self.switchBtns)
+            else:
+                for switch in switchs:
                     if self.get_attr_value(switch,"isopen") == "true":
                         switch.click()
                         self.click(self.operate_close_btn)
-
+                        self.sleep(1)
+                        switchs = self.find_elements(self.switchBtns)
 
 

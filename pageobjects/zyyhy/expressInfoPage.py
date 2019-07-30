@@ -56,11 +56,10 @@ class ExpressInfoPage(BasePage):
     qsystemName_btn = 'id=>ddl-btn-qSystemId' #选择项目下拉框按钮
     def select_qsystemName(self, systemName='请选择'):
         '''查询：选择项目'''
-        if systemName != '请选择':
-            self.click(self.qsystemName_btn)
-            systemName_option = f'xpath=>//ul[@id="qSystemId-ul-li-ul"]/li/a[@itemtext="{systemName}"]'
-            if self.isElementExist(systemName_option):
-                self.click(systemName_option)
+        self.click(self.qsystemName_btn)
+        systemName_option = f'xpath=>//ul[@id="qSystemId-ul-li-ul"]/li/a[@itemtext="{systemName}"]'
+        if self.isElementExist(systemName_option):
+            self.click(systemName_option)
 
     qAddresseePhone = 'id=>qAddresseePhone' #收件人电话输入框
     qAddresseeName = 'id=>qAddresseeName' #收件人姓名输入框
@@ -68,7 +67,7 @@ class ExpressInfoPage(BasePage):
     qexpressName_btn = 'id=>ddl-btn-qexpressName' #选择快递公司下拉框按钮
     def select_qexpressName(self, expressName='请选择'):
         '''查询：选择快递公司'''
-        expressNames = ('圆通','中通','汇通','韵达','百世汇通','顺丰','全峰')
+        expressNames = ('请选择','圆通','中通','汇通','韵达','百世汇通','顺丰','全峰')
         expressName_option = f'xpath=>//ul[@id="qexpressName-ul-li-ul"]/li/a[@itemtext="{expressName}"]'
         if expressName in expressNames:
             self.click(self.qexpressName_btn)
@@ -77,8 +76,8 @@ class ExpressInfoPage(BasePage):
     expressState_btn = 'id=>ddl-btn-qexpressStateName' #选择快递状态下拉框按钮
     def select_qexpressState(self, expressState='请选择'):
         '''查询：选择快递状态'''
-        expressStates = ('未领','已领')
-        expressState_option = f'xpath=>//ul[@id="qexpressName-ul-li-ul"]/li/a[@itemtext="{expressState}"]'
+        expressStates = ('请选择','未领','已领')
+        expressState_option = f'xpath=>//ul[@id="qexpressStateName-ul-li-ul"]/li/a[@itemtext="{expressState}"]'
         if expressState in expressStates:
             self.click(self.expressState_btn)
             self.click(expressState_option)
@@ -98,10 +97,16 @@ class ExpressInfoPage(BasePage):
         self.select_qsystemName(systemName)
         if addressPhone != None:
             self.type(self.qAddresseePhone,addressPhone)
+        else:
+            self.clear(self.qAddresseePhone)
         if addresseeName != None:
             self.type(self.qAddresseeName,addresseeName)
+        else:
+            self.clear(self.qAddresseeName)
         if expressNo != None:
             self.type(self.qExpressNo,expressNo)
+        else:
+            self.clear(self.qExpressNo)
         self.select_qexpressName(expressName)
         self.select_qexpressState(expressState)
         self.click(self.query_btn)
@@ -165,7 +170,7 @@ class ExpressInfoPage(BasePage):
         '''
         if self.get_totalCount() > 0:
             modifyBtns = self.find_elements(self.modify_btns)
-            modifyBtns[1].click()
+            modifyBtns[0].click()
 
             self.select_systemName(systemName)
             if addressPhone != None:

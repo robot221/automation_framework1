@@ -64,17 +64,16 @@ class ParkingNoticePage(BasePage):
 
     def select_qsystemName(self, systemName='请选择'):
         '''查询：选择项目'''
-        if systemName != '请选择':
-            self.click(self.qsystemName_btn)
-            systemName_option = f'xpath=>//ul[@id="projectName-ul-li-ul"]/li/a[@itemtext="{systemName}"]'
-            if self.isElementExist(systemName_option):
-                self.click(systemName_option)
+        self.click(self.qsystemName_btn)
+        systemName_option = f'xpath=>//ul[@id="projectName-ul-li-ul"]/li/a[@itemtext="{systemName}"]'
+        if self.isElementExist(systemName_option):
+            self.click(systemName_option)
 
     qnoticeTypeName_btn = 'id=>ddl-btn-qnoticeTypeName'  # 选择公告类型下拉框按钮
 
     def select_qnoticeTypeName(self, noticeTypeName='请选择'):
         '''新增：选择公告类型'''
-        noticeTypeNames = ('活动', '通知', '紧急', '新闻', '知识', '表扬')
+        noticeTypeNames = ('请选择','活动', '通知', '紧急', '新闻', '知识', '表扬')
         noticeTypeName_option = f'xpath=>//ul[@id="qnoticeTypeName-ul-li-ul"]/li/a[@itemtext="{noticeTypeName}"]'
         if noticeTypeName in noticeTypeNames:
             self.click(self.qnoticeTypeName_btn)
@@ -91,10 +90,13 @@ class ParkingNoticePage(BasePage):
         :param qName: 公告标题
         :return:
         '''
+        self.sleep(1)
         self.select_qsystemName(systemName)
         self.select_qnoticeTypeName(noticeTypeName)
         if qName:
             self.type(self.qName,qName)
+        else:
+            self.clear(self.qName)
         self.click(self.query_btn)
 
     totalCount = 'css=>div#pg>div.totalCountLabel'
@@ -119,7 +121,7 @@ class ParkingNoticePage(BasePage):
         '''
         if self.get_totalCount() > 0:
             modifyBtns = self.find_elements(self.modify_btns)
-            modifyBtns[1].click()
+            modifyBtns[0].click()
             self.select_noticeTypeName(noticeTypeName)
             self.type(self.noticeTitle, noticeTitle)
             self.type_richText(content)

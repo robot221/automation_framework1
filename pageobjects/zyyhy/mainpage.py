@@ -103,7 +103,7 @@ class MainPage(BasePage):
         self.move_to_ele(self.menu_xsjf)
         self.click(self.jfewm)
 
-    menu_yjlx = 'link=>一键联系'
+    menu_yjlx = 'link_text=>一键联系'
     lxrgl = 'id=>accordion-item-249' #联系人管理
     bdjl = 'id=>accordion-item-294' #拨打记录
 
@@ -118,3 +118,41 @@ class MainPage(BasePage):
         self.click(self.menu_life)
         self.move_to_ele(self.menu_yjlx)
         self.click(self.bdjl)
+
+    menu_base = 'link_text=>基础平台'
+    menu_device = 'link_text=>设备档案'
+    deviceManage = 'id=>accordion-item-275' #设备档案
+    def click_deviceManage(self):
+        '''跳转到设备档案'''
+        self.click(self.menu_base)
+        self.move_to_ele(self.menu_device)
+        self.click(self.deviceManage)
+
+    menu_project = 'link_text=>项目管理'
+    projectManage = 'id=>accordion-item-264' #项目管理
+    def click_projectManage(self):
+        '''跳转到项目管理'''
+        self.click(self.menu_base)
+        self.move_to_ele(self.menu_project)
+        self.click(self.projectManage)
+
+    menu_os = 'link_text=>物业运营平台'
+    menu_express = 'link_text=>快递信息'
+    expressInfoM = 'id=>accordion-item-239' #快递信息管理
+    def click_expressInfoM(self):
+        '''跳转到快递信息管理'''
+        self.click(self.menu_os)
+        self.move_to_ele(self.menu_express)
+        self.click(self.expressInfoM)
+
+    menu_parkingNotice = 'link_text=>园区公告'
+    parkingNoticeM = 'id=>accordion-item-243' #园区公告管理
+    def click_parkingNoticeM(self):
+        '''跳转到园区公告管理'''
+        self.click(self.menu_os)
+        self.move_to_ele(self.menu_parkingNotice)
+        self.click(self.parkingNoticeM)
+
+
+
+

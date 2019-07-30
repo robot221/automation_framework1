@@ -19,8 +19,8 @@ class ProjectManagePage(BasePage):
         :return:
         '''
         provice_option = f'xpath=>//ul[@id="provinceName-ul-li-ul"]/li/a[@itemtext="{provinceName}"]'
-        city_option = f'xpath=>//ul[@id="provinceName-ul-li-ul"]/li/a[@itemtext="{cityName}"]'
-        district_option = f'xpath=>//ul[@id="provinceName-ul-li-ul"]/li/a[@itemtext="{districtName}"]'
+        city_option = f'xpath=>//ul[@id="cityName-ul-li-ul"]/li/a[@itemtext="{cityName}"]'
+        district_option = f'xpath=>//ul[@id="districtName-ul-li-ul"]/li/a[@itemtext="{districtName}"]'
         self.click(self.provinceName_btn)
         self.click(provice_option)
         self.click(self.cityName_btn)
@@ -88,10 +88,16 @@ class ProjectManagePage(BasePage):
         """
         if projectCode:
             self.type(self.qProjectCode,projectCode)
+        else:
+            self.clear(self.qProjectCode)
         if projectName:
             self.type(self.qProjectName,projectName)
+        else:
+            self.clear(self.qProjectName)
         if projectAddr:
             self.type(self.qProjectAddr,projectAddr)
+        else:
+            self.clear(self.qProjectAddr)
         self.click(self.query_btn)
 
     totalCount = 'css=>div#pg>div.totalCountLabel'
@@ -103,7 +109,7 @@ class ProjectManagePage(BasePage):
 
     """修改"""
     modify_btns = 'xpath=>//a[@class="calss-modify" and @title="修改"]'  # 修改按钮
-    def modifyProject(self,projectCode,projectName,provinceName,cityName,districtName,addrDetail,projectType,acreage,overview):
+    def modifyProject(self,projectCode=None,projectName=None,provinceName=None,cityName=None,districtName=None,addrDetail=None,projectType=None,acreage=None,overview=None):
         """
         修改项目
         :param projectCode: 项目编码
@@ -120,20 +126,27 @@ class ProjectManagePage(BasePage):
         if self.get_totalCount() > 0:
             modifyBtns = self.find_elements(self.modify_btns)
             modifyBtns[0].click()
-            self.type(self.projectCode, projectCode)
-            self.type(self.projectName, projectName)
-            self.select_projectAddress(provinceName, cityName, districtName)
-            self.type(self.addrDetail, addrDetail)
-            self.select_projectType(projectType)
-            self.type(self.acreage, acreage)
-            self.type(self.overview, overview)
+            if projectCode:
+                self.type(self.projectCode, projectCode)
+            if projectName:
+                self.type(self.projectName, projectName)
+            if provinceName and cityName and districtName:
+                self.select_projectAddress(provinceName, cityName, districtName)
+            if addrDetail:
+                self.type(self.addrDetail, addrDetail)
+            if projectType:
+                self.select_projectType(projectType)
+            if acreage:
+                self.type(self.acreage, acreage)
+            if overview:
+                self.type(self.overview, overview)
             self.click(self.save_btn)
             self.click(self.close_alert_btn)
 
     '''删除'''
-    del_btns = 'xpath=>//a[@class="class-delete" and @title="删除"]'  # 删除按钮
+    del_btns = 'xpath=>//a[@class="calss-del" and @title="删除"]'  # 删除按钮
     confirm_del_btn = 'xpath=>//div[@id="error-div-modal-content"]/div[@class="modal-footer modal-footer"]/a[1]'  # 确定删除按钮
-    def delNotice(self):
+    def delProject(self):
         '''
         删除
         :return:
@@ -152,7 +165,7 @@ class ProjectManagePage(BasePage):
         if self.get_totalCount() > 0:
             bannerBtns = self.find_elements(self.banner_btns)
             bannerBtns[0].click()
-    
+
 
 
 

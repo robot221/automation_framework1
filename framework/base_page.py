@@ -334,7 +334,7 @@ class BasePage(object):
 
     def get_attr_value(self,element,value):
         '''获取元素的属性值'''
-        return element.getAttribute(value)
+        return element.get_attribute(value)
 
     @staticmethod
     def sleep(seconds):
